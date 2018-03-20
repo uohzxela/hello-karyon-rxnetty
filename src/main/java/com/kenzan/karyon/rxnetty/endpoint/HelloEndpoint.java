@@ -29,7 +29,7 @@ public class HelloEndpoint {
     public Observable<String> getHello() {
         return Observable.just("Hello");
     }
-
+    // comment to trigger build
     public Observable<String> getHelloName(HttpServerRequest<ByteBuf> request) {
         UriPattern pattern = new UriPattern(Pattern.compile("/hello/(.*)"));
         String name = pattern.match(request.getUri()).group(1);
